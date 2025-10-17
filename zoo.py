@@ -135,10 +135,13 @@ class BiModernVBertModel(fout.TorchImageModel, fom.PromptMixin):
         
         
         logger.info(f"Loading BiModernVBert model from {config.model_path}")
+
         
         model_kwargs = {
             "device_map": self.device,
         }
+
+        torch.set_float32_matmul_precision('high')
 
         # Set optimizations based on device capabilities
         if self.device == "cuda" and torch.cuda.is_available():
