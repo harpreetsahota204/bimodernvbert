@@ -356,9 +356,9 @@ class BiModernVBertModel(fout.TorchImageModel, fom.PromptMixin):
                 - logits_per_text: shape (num_classes, num_images)
         """
         with torch.no_grad():
-            # Convert to list of tensors (processor.score expects this)
-            text_list = [text_features[i:i+1] for i in range(text_features.shape[0])]
-            image_list = [image_features[i:i+1] for i in range(image_features.shape[0])]
+            # Convert to list of 1D tensors (processor.score expects this)
+            text_list = list(text_features)
+            image_list = list(image_features)
             
             # Use processor's built-in scoring (cosine similarity)
             logits_per_text = self.processor.score(
