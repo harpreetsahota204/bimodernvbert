@@ -1,0 +1,32 @@
+{
+    "name": "bimodernvbert",
+    "url": "https://github.com/harpreetsahota204/bimodernvbert",
+    "models": [
+        {
+            "base_name": "ModernVBERT/bimodernvbert",
+            "base_filename":"bimodernvbert",
+            "author": "Paul Teiletche, et. al",
+            "license": "MIT",
+            "source": "https://huggingface.co/ModernVBERT/bimodernvbert",
+            "description": "The ModernVBERT suite is a suite of compact 250M-parameter vision-language encoders. BiModernVBERT is the bi-encoder version that is fine-tuned for visual document retrieval tasks.",
+            "tags": [
+                "classification",
+                "logits",
+                "embeddings",
+                "torch",
+                "visual-document-retrieval",
+                "zero-shot"
+            ],
+            "date_added": "2025-10-17",
+            "requirements": {
+                "packages": ["huggingface-hub","transformers", "torch", "torchvision",  "colpali-engine"],
+                "cpu": {
+                    "support": true
+                },
+                "gpu": {
+                    "support": true
+                }
+            }
+        }
+   ]
+}
