@@ -1,5 +1,7 @@
 # BiModernVBert for FiftyOne
 
+![image](bimodernvbert_fo.gif)
+
 [BiModernVBert](https://huggingface.co/ModernVBERT/bimodernvbert) is a vision-language model built on the ModernVBert architecture that generates embeddings for both images and text in a shared 768-dimensional vector space. Unlike multi-vector models (ColPali, Jina v4), BiModernVBert uses single-vector embeddings with simple cosine similarity, making it efficient for large-scale document retrieval while maintaining strong performance.
 
 ## Key Features
